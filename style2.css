@@ -1,0 +1,302 @@
+body{
+    background-color: rgb(255, 255, 255);
+    background-image: url(marbre1.jpg);
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+h1{
+    color: rgb(0, 0, 0); 
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    margin: -1px;
+    margin-top: 0px; 
+}
+ img{
+   position: absolute;
+   width: 140px;
+   margin-left: 200px;
+   margin-top: -248px ;
+ }
+
+/* barre de scroll */
+
+::-webkit-scrollbar{
+  background-color: rgb(255, 255, 255);
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(121, 118, 118);
+  border-radius: 80vw;
+}
+
+/* ~~~~~~~ INIT. BTN ~~~~~~~ */
+.button{
+    position: absolute;
+    left: 30px;
+    display: flex;
+    margin-bottom: 0px;
+}
+
+.btn {    
+    position: relative; 
+    padding: 1.4rem 4.2rem;
+
+    font-size: 25px;
+    color: var(--inv);
+    letter-spacing: 1.1rem;
+    text-transform: uppercase;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);  
+    cursor: pointer;
+    user-select: none;
+
+
+  }
+  
+  .btn:before, .btn:after {
+    content: '';
+    position: absolute; 
+    transition: inherit;
+    z-index: -1;
+  }
+  
+  .btn:hover {
+    color: var(--def);
+    transition-delay: .5s;
+  }
+  
+  .btn:hover:before {
+    transition-delay: 0s;
+  }
+  
+  .btn:hover:after {
+    background: var(--inv);
+    transition-delay: .35s;
+  }
+  
+  /* From Top */
+  
+  
+  
+  /* From center */
+  
+  .from-center:before {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    border: 1px solid var(--inv);
+    border-left: 0;
+    border-right: 0;
+  }
+  
+  .from-center:after {
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: var(--inv);
+  }
+  
+  .from-center:hover:before {
+    left: 0;
+    width: 100%;
+  }
+  
+  .from-center:hover:after {
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* From Bottom */
+  
+  .from-bottom:before, 
+  .from-bottom:after {
+    left: 10%;
+    height: 0%;
+    width: 90%;
+  }
+  
+  .from-bottom:before {
+    top: -10px; 
+    border: 1px solid var(--inv);
+    border-top: 0;
+    border-bottom: 0;
+  }
+  
+  .from-bottom:after {
+    bottom: 0;
+    height: 0;
+  }
+  
+  .from-bottom:hover:before,
+  .from-bottom:hover:after {
+    height: 100%;
+    top: -10px;
+  }
+  
+  
+  /* ~~~~~~~~~~~~ GLOBAL SETTINGS ~~~~~~~~~~~~ */
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    --def: #ffffff;   
+    --inv: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  
+  }
+  
+  html {
+    font-size: 12px;
+    font-family: 'Playfair Display', serif;
+  }
+  .button .lien{
+    text-decoration: none;
+    color:rgb(0, 0, 0)
+}
+.button .lien:hover
+{
+    transition-delay: 1s;
+    transition: inherit;
+    text-decoration: none;
+    color:rgb(255, 255, 255)
+}
+
+  div {margin-bottom: 1rem;}
+  div:last-child {margin-bottom: 0;}
+
+@keyframes glowing {
+0% { background-position: 0 0; }
+50% { background-position: 400% 0; }
+100% { background-position: 0 0; }
+}
+
+
+
+
+.logo{
+display: block;
+width: 80px;
+height: 60px;
+position: relative;
+right: 0%;
+left: 100%;
+margin-top: -70px;
+
+}
+.title{
+    position: absolute;
+    width: 300px;
+    left: 6%;
+    font-size: 30px;
+    margin-bottom: 430px
+   
+
+
+    
+}
+
+.sky{
+    width: 110%;
+    height: 1%;
+    display: flex;
+    position: relative;
+    right: 100%;
+    left: 0%;
+    margin-left: -15px;
+    margin-top: -150px;
+}
+@keyframes example 
+{
+    0%
+    {
+        background-position-x: 0%;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+.m1{
+    width: 110%;
+    height: 1%;
+    display: flex;
+    position: relative;
+    right: 100%;
+    left: 0%;
+    margin-left: -15px;
+    margin-top: -150px;
+    animation: example 30s linear infinite;
+    
+}
+
+.top-page{
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Playfair Display', cursive;
+  margin-left: 5%;
+  margin-right: 20%;
+  margin-top: 320px;
+  
+}
+
+
+
+
+.midle-page{
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Playfair Display', cursive;
+  margin-left: -44%;
+  margin-right: 20%;
+  margin-top: 1500px;
+ 
+
+}
+.social{
+    margin-top: 100px;
+}
+
+/* pied de page */
+
+
+footer{
+  background-color: linear-gradient(white);
+  padding:20px;
+  margin-right: 10px ;
+  color: black;
+  font-family: 'Playfair Display';
+  margin-top: 2000px;
+
+
+}
+
+/*footer .colonnes{
+  display: flex;
+
+  flex-wrap: wrap;
+}*/
+.colonnes
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+p{
+  padding: 10px;
+}
